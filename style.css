@@ -1,0 +1,1938 @@
+/* =======================================
+   NYROX V3 - PART 2A
+   Global + Background + Header + Hero
+======================================= */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+:root{
+
+--bg:#090909;
+--card:#141414;
+--card2:#1b1b1b;
+
+--gold:#D8B15B;
+--gold2:#F4D68A;
+
+--text:#ffffff;
+--gray:#9d9d9d;
+
+}
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+body{
+
+background:var(--bg);
+
+color:var(--text);
+
+overflow-x:hidden;
+
+min-height:100vh;
+
+}
+
+/* =========================
+Background Grid
+========================= */
+
+.background-grid{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+
+linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+z-index:-2;
+
+}
+
+/* =========================
+Header
+========================= */
+
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 28px;
+
+}
+
+.logo h1{
+
+font-size:52px;
+
+letter-spacing:8px;
+
+color:var(--gold);
+
+font-weight:900;
+
+}
+
+.logo p{
+
+margin-top:8px;
+
+font-size:18px;
+
+color:var(--gray);
+
+}
+
+.menu-btn{
+
+width:64px;
+
+height:64px;
+
+border:none;
+
+border-radius:18px;
+
+background:var(--card);
+
+color:var(--gold);
+
+font-size:30px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.menu-btn:hover{
+
+transform:scale(1.05);
+
+background:#202020;
+
+}
+
+/* =========================
+Hero
+========================= */
+
+.hero{
+
+padding:90px 30px;
+
+max-width:850px;
+
+}
+
+.badge{
+
+display:inline-block;
+
+padding:10px 18px;
+
+border:1px solid rgba(216,177,91,.45);
+
+border-radius:50px;
+
+color:var(--gold);
+
+font-size:13px;
+
+letter-spacing:2px;
+
+margin-bottom:30px;
+
+}
+
+.hero h2{
+
+font-size:70px;
+
+line-height:1.15;
+
+margin-bottom:25px;
+
+}
+
+.hero p{
+
+font-size:22px;
+
+color:var(--gray);
+
+line-height:1.8;
+
+max-width:650px;
+
+margin-bottom:45px;
+
+}
+
+.start-btn{
+
+padding:18px 38px;
+
+border:none;
+
+border-radius:16px;
+
+background:linear-gradient(135deg,var(--gold),var(--gold2));
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+color:#111;
+
+transition:.35s;
+
+}
+
+.start-btn:hover{
+
+transform:translateY(-4px);
+
+box-shadow:0 12px 35px rgba(216,177,91,.30);
+
+}
+/* =======================================
+   NYROX V3 - PART 2B
+   Sidebar + Features + Footer
+======================================= */
+
+/* ========= Sidebar ========= */
+
+.overlay{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.6);
+
+backdrop-filter:blur(3px);
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.35s;
+
+z-index:90;
+
+}
+
+.overlay.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.sidebar{
+
+position:fixed;
+
+top:0;
+
+right:-320px;
+
+width:300px;
+
+height:100vh;
+
+background:#111;
+
+border-left:1px solid #262626;
+
+padding:35px 25px;
+
+transition:.35s;
+
+z-index:100;
+
+}
+
+.sidebar.active{
+
+right:0;
+
+}
+
+.sidebar h2{
+
+color:var(--gold);
+
+font-size:32px;
+
+margin-bottom:35px;
+
+letter-spacing:3px;
+
+}
+
+.sidebar a{
+
+display:block;
+
+text-decoration:none;
+
+color:white;
+
+padding:15px;
+
+margin-bottom:12px;
+
+border-radius:12px;
+
+transition:.3s;
+
+background:#181818;
+
+}
+
+.sidebar a:hover{
+
+background:var(--gold);
+
+color:#111;
+
+transform:translateX(6px);
+
+}
+
+/* ========= Features ========= */
+
+.features{
+
+padding:30px;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:22px;
+
+}
+
+.feature-card{
+
+background:var(--card);
+
+border:1px solid #2b2b2b;
+
+padding:28px;
+
+border-radius:22px;
+
+transition:.35s;
+
+}
+
+.feature-card:hover{
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+box-shadow:0 15px 35px rgba(216,177,91,.18);
+
+}
+
+.feature-card h3{
+
+color:var(--gold);
+
+font-size:24px;
+
+margin-bottom:15px;
+
+}
+
+.feature-card p{
+
+color:var(--gray);
+
+line-height:1.8;
+
+}
+
+/* ========= Quote ========= */
+
+.quote{
+
+padding:80px 30px;
+
+text-align:center;
+
+}
+
+.quote h2{
+
+max-width:850px;
+
+margin:auto;
+
+font-size:38px;
+
+line-height:1.5;
+
+color:var(--gold2);
+
+}
+
+/* ========= Footer ========= */
+
+footer{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+border-top:1px solid #222;
+
+color:var(--gray);
+
+font-size:15px;
+
+}
+/* =======================================
+   NYROX V3 - PART 2C
+   Animations + Responsive + Final Polish
+======================================= */
+
+/* ========= Fade Animation ========= */
+
+.header,
+.hero,
+.features,
+.quote,
+footer{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* ========= Buttons ========= */
+
+button{
+
+transition:.3s ease;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+/* ========= Scrollbar ========= */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:var(--gold);
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:var(--gold2);
+
+}
+
+/* ========= Selection ========= */
+
+::selection{
+
+background:var(--gold);
+
+color:#111;
+
+}
+
+/* ========= Glass Effect ========= */
+
+.glass{
+
+background:rgba(255,255,255,.04);
+
+backdrop-filter:blur(14px);
+
+border:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ========= Responsive ========= */
+
+@media (max-width:768px){
+
+.header{
+
+padding:18px;
+
+}
+
+.logo h1{
+
+font-size:38px;
+
+letter-spacing:5px;
+
+}
+
+.logo p{
+
+font-size:13px;
+
+}
+
+.menu-btn{
+
+width:54px;
+
+height:54px;
+
+font-size:24px;
+
+}
+
+.hero{
+
+padding:60px 20px;
+
+}
+
+.hero h2{
+
+font-size:44px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.start-btn{
+
+width:100%;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+padding:20px;
+
+}
+
+.feature-card{
+
+padding:22px;
+
+}
+
+.quote{
+
+padding:50px 20px;
+
+}
+
+.quote h2{
+
+font-size:28px;
+
+}
+
+.sidebar{
+
+width:260px;
+
+}
+
+}
+
+/* ========= Desktop ========= */
+
+@media (min-width:1200px){
+
+.hero{
+
+max-width:1000px;
+
+}
+
+.hero h2{
+
+font-size:82px;
+
+}
+
+.hero p{
+
+font-size:24px;
+
+}
+
+.features{
+
+max-width:1200px;
+
+margin:auto;
+
+}
+
+}
+/* ===== Ripple Effect ===== */
+
+button{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.ripple{
+
+position:absolute;
+
+width:15px;
+
+height:15px;
+
+background:rgba(255,255,255,.5);
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+animation:ripple .6s linear;
+
+pointer-events:none;
+
+}
+
+@keyframes ripple{
+
+0%{
+
+transform:translate(-50%,-50%) scale(0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(-50%,-50%) scale(18);
+
+opacity:0;
+
+}
+
+}
+/* ===== Page Transition ===== */
+
+body.page-enter{
+    opacity:0;
+    transform:translateY(10px);
+}
+
+body.page-enter-active{
+    opacity:1;
+    transform:translateY(0);
+    transition:opacity .35s ease, transform .35s ease;
+}
+
+body.page-exit{
+    opacity:0;
+    transform:translateY(-10px);
+    transition:opacity .3s ease, transform .3s ease;
+}
+/* =======================================
+   NYROX V3 - PART 4B
+   Challenge Dashboard
+======================================= */
+
+/* ===== Challenge Page ===== */
+
+.challenge-page{
+    padding:55px 30px 80px;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* ===== Page Heading ===== */
+
+.page-heading{
+    margin-bottom:45px;
+}
+
+.page-heading h2{
+    font-size:58px;
+    line-height:1.1;
+    margin:22px 0 18px;
+}
+
+.page-heading p{
+    max-width:650px;
+    color:var(--gray);
+    font-size:18px;
+    line-height:1.7;
+}
+
+/* ===== Challenge Grid ===== */
+
+.challenge-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:22px;
+}
+
+/* ===== Challenge Card ===== */
+
+.challenge-card{
+    position:relative;
+    overflow:hidden;
+
+    background:linear-gradient(
+        145deg,
+        #181818,
+        #101010
+    );
+
+    border:1px solid #292929;
+
+    border-radius:24px;
+
+    padding:30px;
+
+    min-height:270px;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+.challenge-card::before{
+    content:"";
+
+    position:absolute;
+
+    width:180px;
+    height:180px;
+
+    top:-80px;
+    right:-70px;
+
+    background:rgba(216,177,91,.08);
+
+    border-radius:50%;
+
+    transition:.4s ease;
+}
+
+.challenge-card:hover{
+    transform:translateY(-8px);
+
+    border-color:rgba(216,177,91,.65);
+
+    box-shadow:
+        0 18px 45px rgba(0,0,0,.45),
+        0 0 30px rgba(216,177,91,.08);
+}
+
+.challenge-card:hover::before{
+    transform:scale(1.4);
+}
+
+/* ===== Challenge Number ===== */
+
+.challenge-number{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:52px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+/* ===== Challenge Title ===== */
+
+.challenge-card h3{
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+/* ===== Challenge Description ===== */
+
+.challenge-card p{
+    color:var(--gray);
+
+    line-height:1.6;
+
+    max-width:400px;
+
+    margin-bottom:25px;
+}
+
+/* ===== Challenge Button ===== */
+
+.challenge-btn{
+    position:relative;
+    z-index:2;
+
+    border:none;
+
+    padding:14px 22px;
+
+    border-radius:13px;
+
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold2)
+    );
+
+    color:#111;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+}
+
+.challenge-btn:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(216,177,91,.22);
+}
+
+/* ===== Mobile ===== */
+
+@media (max-width:768px){
+
+    .challenge-page{
+        padding:40px 20px 60px;
+    }
+
+    .page-heading h2{
+        font-size:42px;
+    }
+
+    .page-heading p{
+        font-size:16px;
+    }
+
+    .challenge-grid{
+        grid-template-columns:1fr;
+    }
+
+    .challenge-card{
+        min-height:240px;
+        padding:24px;
+    }
+
+    .challenge-number{
+        font-size:44px;
+    }
+
+}
+/* ===== Challenge Selection ===== */
+
+.challenge-selected {
+    transform: scale(.98);
+    border-color: var(--gold);
+    box-shadow: 0 0 30px rgba(216,177,91,.15);
+}
+
+.challenge-btn:disabled {
+    opacity: .7;
+    cursor: wait;
+}
+/* =======================================
+   NYROX V3 - PART 4E
+   7 Days Dashboard UI
+======================================= */
+
+/* ===== Daily Page ===== */
+
+.daily-page{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:45px 30px 80px;
+}
+
+/* ===== Progress Card ===== */
+
+.progress-card{
+    background:linear-gradient(145deg,#181818,#101010);
+    border:1px solid #292929;
+    border-radius:22px;
+    padding:25px;
+    margin-bottom:22px;
+}
+
+.progress-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:15px;
+    color:var(--gray);
+}
+
+.progress-top span:last-child{
+    color:var(--gold);
+    font-weight:800;
+}
+
+.progress-bar{
+    width:100%;
+    height:12px;
+    background:#252525;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:linear-gradient(
+        90deg,
+        var(--gold),
+        var(--gold2)
+    );
+    border-radius:20px;
+    transition:width .5s ease;
+}
+
+/* ===== Week Tracker Card ===== */
+
+.week-tracker-card{
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:22px;
+    padding:25px;
+    margin-bottom:22px;
+}
+
+.week-tracker-card h3{
+    color:var(--gold);
+    margin-bottom:18px;
+    letter-spacing:1px;
+}
+
+/* ===== Week Tracker ===== */
+
+.week-tracker{
+    display:grid;
+    grid-template-columns:repeat(7,1fr);
+    gap:10px;
+}
+
+.week-tracker .day{
+    background:#181818;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:14px 5px;
+    text-align:center;
+    color:#888;
+    font-size:13px;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.week-tracker .day:hover{
+    color:var(--gold);
+    border-color:var(--gold);
+}
+
+.week-tracker .day.active{
+    background:var(--gold);
+    color:#111;
+    border-color:var(--gold);
+}
+
+/* ===== Info Card ===== */
+
+.daily-page .info-card{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+    background:var(--card);
+    border:1px solid #292929;
+    border-radius:22px;
+    padding:25px;
+    margin-bottom:22px;
+}
+
+.info-item{
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.info-item label{
+    color:var(--gray);
+    font-size:13px;
+}
+
+.info-item input{
+    width:100%;
+    background:#101010;
+    border:1px solid #303030;
+    color:white;
+    padding:13px;
+    border-radius:11px;
+    outline:none;
+}
+
+.info-item input:focus{
+    border-color:var(--gold);
+}
+
+/* ===== Target Sheet ===== */
+
+.target-sheet{
+    background:linear-gradient(145deg,#181818,#101010);
+    border:1px solid #292929;
+    border-radius:24px;
+    padding:30px;
+    margin-bottom:22px;
+}
+
+.target-sheet > h2{
+    color:var(--gold);
+    font-size:24px;
+    margin-bottom:30px;
+    letter-spacing:1px;
+}
+
+.target-sheet h3{
+    font-size:16px;
+    margin:22px 0 10px;
+}
+
+/* ===== Full Input ===== */
+
+.full-input{
+    width:100%;
+    background:#101010;
+    border:1px solid #303030;
+    border-radius:12px;
+    padding:15px;
+    color:white;
+    outline:none;
+}
+
+.full-input:focus{
+    border-color:var(--gold);
+}
+
+/* ===== Target Row ===== */
+
+.target-row{
+    display:grid;
+    grid-template-columns:1fr 150px;
+    gap:12px;
+    margin-bottom:12px;
+}
+
+.task-input,
+.task-status{
+    width:100%;
+    background:#101010;
+    border:1px solid #303030;
+    color:white;
+    padding:14px;
+    border-radius:11px;
+    outline:none;
+}
+
+.task-input:focus,
+.task-status:focus{
+    border-color:var(--gold);
+}
+
+/* ===== Add Target ===== */
+
+#addTask{
+    margin-top:12px;
+    background:#202020;
+    color:var(--gold);
+    border:1px solid #3a3a3a;
+}
+
+#addTask:hover{
+    border-color:var(--gold);
+    background:#252525;
+}
+
+/* ===== Save Button ===== */
+
+.save-btn{
+    display:block;
+    width:100%;
+    border:none;
+    border-radius:15px;
+    padding:17px;
+    background:linear-gradient(
+        135deg,
+        var(--gold),
+        var(--gold2)
+    );
+    color:#111;
+    font-size:17px;
+    font-weight:800;
+    cursor:pointer;
+    transition:.3s ease;
+}
+
+.save-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 12px 30px rgba(216,177,91,.2);
+}
+
+/* ===== Mobile ===== */
+
+@media(max-width:768px){
+
+    .daily-page{
+        padding:35px 18px 60px;
+    }
+
+    .daily-page .info-card{
+        grid-template-columns:1fr;
+    }
+
+    .week-tracker{
+        grid-template-columns:repeat(4,1fr);
+    }
+
+    .target-sheet{
+        padding:22px 18px;
+    }
+
+    .target-row{
+        grid-template-columns:1fr;
+    }
+
+}
+
+/* ===== Small Mobile ===== */
+
+@media(max-width:420px){
+
+    .week-tracker{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .page-heading h2{
+        font-size:38px;
+    }
+
+}
+/* ===== Week Completion ===== */
+
+.week-tracker .day.completed{
+
+    background:var(--gold);
+
+    color:#111;
+
+    border-color:var(--gold);
+
+    box-shadow:
+        0 0 18px rgba(216,177,91,.20);
+
+}
+
+.week-tracker .day.completed::after{
+
+    content:" ✓";
+
+    font-weight:900;
+
+}
+
+.week-tracker .day.partial{
+
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+}
+/* =======================================
+   NYROX V3 - PART 4J
+   Completed Day Indicator
+======================================= */
+
+.week-tracker .day.completed {
+    background: #D8B15B;
+    color: #111;
+    border-color: #D8B15B;
+    position: relative;
+}
+
+.week-tracker .day.completed::after {
+    content: "✓";
+    margin-left: 6px;
+    font-weight: 900;
+}
+
+.week-tracker .day.partial {
+    border-color: #D8B15B;
+    color: #D8B15B;
+}
+/* ===== Remove Target Button ===== */
+
+.remove-task-btn {
+    width: 42px;
+    height: 42px;
+
+    border: 1px solid #333;
+    border-radius: 10px;
+
+    background: #181818;
+    color: #999;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.remove-task-btn:hover {
+    color: #D8B15B;
+    border-color: #D8B15B;
+}
+/* =======================================
+   REMOVE TARGET BUTTON - FIX
+======================================= */
+
+.target-row {
+    position: relative;
+}
+
+.remove-task-btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px !important;
+    height: 42px !important;
+
+    margin: 8px 0 0 auto !important;
+
+    border: 1px solid #555 !important;
+    border-radius: 10px !important;
+
+    background: #181818 !important;
+    color: #D8B15B !important;
+
+    font-size: 18px !important;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.remove-task-btn:active {
+    transform: scale(0.95);
+}
+/* ================================
+   MISSED REASON BOX
+================================ */
+
+.missed-reason {
+    width: 100%;
+    min-height: 90px;
+    box-sizing: border-box;
+
+    background: #171717;
+    color: #ffffff;
+
+    border: 1px solid #333;
+    border-radius: 14px;
+
+    padding: 14px 16px;
+
+    font-family: inherit;
+    font-size: 16px;
+
+    outline: none;
+
+    /* Bottom-right resize handle remove */
+    resize: none;
+}
+
+.missed-reason::placeholder {
+    color: #777;
+}
+
+.missed-reason:focus {
+    border-color: #d9b45b;
+}
+/* =================================================
+   SETTINGS PAGE SPACING
+================================================= */
+
+#saveSettings {
+    margin-bottom: 35px;
+}
+
+#saveSettings + .target-sheet {
+    margin-top: 0;
+}
+/* =====================================================
+   NYROX SETTINGS — PREMIUM UI
+===================================================== */
+
+.settings-page {
+    width: min(100%, 760px);
+    margin: 0 auto;
+    padding: 35px 25px 50px;
+}
+
+
+/* HEADER */
+
+.header .logo h1 {
+    margin: 0;
+    font-size: 42px;
+    letter-spacing: 1px;
+}
+
+.header .logo p {
+    margin-top: 5px;
+    opacity: 0.65;
+}
+
+
+/* SIDEBAR BRAND */
+
+.sidebar-brand {
+    margin-bottom: 35px;
+}
+
+.sidebar-brand h2 {
+    font-size: 38px;
+    margin: 0;
+}
+
+.sidebar-brand p {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 4px;
+    opacity: 0.75;
+}
+
+
+/* SIDEBAR ACTIVE */
+
+.sidebar a.active {
+    border: 1px solid #d9a934;
+    background: rgba(218, 169, 52, 0.08);
+    border-radius: 14px;
+    color: #f0c75e;
+}
+
+
+/* SETTINGS CARD */
+
+.settings-card {
+    background: linear-gradient(
+        145deg,
+        rgba(25, 25, 25, 0.96),
+        rgba(14, 14, 14, 0.96)
+    );
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 20px;
+
+    padding: 25px 28px;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.25);
+}
+
+
+/* TITLE */
+
+.settings-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 22px;
+}
+
+.settings-title h2 {
+    margin: 0;
+    color: #e7bd55;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.settings-icon {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(220,170,55,0.10);
+
+    border: 1px solid rgba(220,170,55,0.30);
+
+    font-size: 22px;
+}
+
+
+/* INPUTS */
+
+.setting-field {
+    margin-bottom: 18px;
+}
+
+.setting-field:last-child {
+    margin-bottom: 0;
+}
+
+.setting-field label {
+    display: block;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.setting-field input {
+    width: 100%;
+    box-sizing: border-box;
+
+    height: 52px;
+
+    padding: 0 15px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    background: rgba(5,5,5,0.65);
+
+    color: #fff;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+.setting-field input:focus {
+    border-color: #dcb44f;
+
+    box-shadow:
+        0 0 0 2px rgba(220,180,79,0.10);
+}
+
+
+/* OPTION */
+
+.setting-option {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.setting-option h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+.setting-option p {
+    margin: 0;
+
+    color: rgba(255,255,255,0.65);
+
+    font-size: 16px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   GOLD TOGGLE
+===================================================== */
+
+.nyrox-toggle {
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.nyrox-toggle input {
+    display: none;
+}
+
+.toggle-track {
+    width: 72px;
+    height: 38px;
+
+    display: block;
+
+    border-radius: 30px;
+
+    border: 2px solid #dcb34d;
+
+    background: #171717;
+
+    position: relative;
+
+    transition: 0.25s;
+}
+
+.toggle-circle {
+    width: 28px;
+    height: 28px;
+
+    position: absolute;
+
+    top: 3px;
+    left: 4px;
+
+    border-radius: 50%;
+
+    background: #dcb34d;
+
+    color: #111;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 900;
+
+    transition: 0.25s;
+}
+
+.nyrox-toggle input:checked + .toggle-track {
+    background: #111;
+}
+
+.nyrox-toggle input:checked + .toggle-track .toggle-circle {
+    transform: translateX(34px);
+
+    background: #f4d16c;
+}
+
+
+/* =====================================================
+   GOLD CHECKBOX
+===================================================== */
+
+.nyrox-check {
+    flex-shrink: 0;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+.nyrox-check input {
+    display: none;
+}
+
+.nyrox-check span {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    border: 1px solid #dcb34d;
+
+    color: transparent;
+
+    background: rgba(220,179,77,0.08);
+
+    font-size: 25px;
+    font-weight: 900;
+
+    transition: 0.2s;
+}
+
+.nyrox-check input:checked + span {
+    background: linear-gradient(
+        145deg,
+        #f1ce69,
+        #c9972e
+    );
+
+    color: #151515;
+
+    box-shadow:
+        0 5px 15px rgba(220,179,77,0.20);
+}
+
+
+/* =====================================================
+   SAVE BUTTON
+===================================================== */
+
+.settings-save-btn {
+    width: 100%;
+
+    height: 64px;
+
+    margin: 2px 0 30px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #f0ca64,
+        #dcae3d
+    );
+
+    color: #111;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.settings-save-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(220,174,60,0.20);
+}
+
+.settings-save-btn:active {
+    transform: scale(0.98);
+}
+
+
+/* =====================================================
+   DANGER ZONE
+===================================================== */
+
+.danger-zone {
+    padding: 25px 18px 20px;
+
+    border: 1px solid rgba(255,60,60,0.75);
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(45,10,10,0.20),
+            rgba(10,10,10,0.85)
+        );
+}
+
+.danger-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+.danger-title span {
+    color: #ff4545;
+
+    font-size: 28px;
+}
+
+.danger-title h2 {
+    margin: 0;
+
+    color: #ff4d4d;
+
+    font-size: 22px;
+}
+
+.danger-description {
+    color: rgba(255,255,255,0.75);
+
+    line-height: 1.5;
+
+    margin: 0 5px 20px;
+}
+
+
+/* RESET GRID */
+
+.reset-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+
+/* RESET BUTTON */
+
+.reset-btn {
+    min-height: 56px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid #d84b4b;
+
+    background: rgba(20,8,8,0.65);
+
+    color: #ff5555;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.reset-btn:hover {
+    background: rgba(220,60,60,0.10);
+
+    transform: translateY(-1px);
+}
+
+.reset-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* RESET ALL */
+
+.reset-btn.reset-all {
+    background: rgba(160,45,45,0.30);
+
+    color: #ffdede;
+
+    border-color: #e05252;
+}
+
+
+/* FOOTER */
+
+.settings-footer {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: rgba(255,255,255,0.55);
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .settings-page {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 25px 16px 40px;
+    }
+
+    .settings-card {
+        padding: 22px 20px;
+        border-radius: 18px;
+    }
+
+    .settings-title h2 {
+        font-size: 20px;
+    }
+
+    .setting-option {
+        align-items: center;
+    }
+
+    .setting-option p {
+        font-size: 14px;
+    }
+
+    .reset-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .reset-btn {
+        width: 100%;
+    }
+
+    .settings-save-btn {
+        height: 60px;
+    }
+
+}
+
+
+/* VERY SMALL PHONES */
+
+@media (max-width: 380px) {
+
+    .settings-card {
+        padding: 20px 16px;
+    }
+
+    .setting-option {
+        gap: 10px;
+    }
+
+    .setting-option h3 {
+        font-size: 16px;
+    }
+
+    .setting-option p {
+        font-size: 13px;
+    }
+
+    .toggle-track {
+        width: 62px;
+    }
+
+    .toggle-circle {
+        width: 26px;
+        height: 26px;
+    }
+
+    .nyrox-toggle input:checked
+    + .toggle-track
+    .toggle-circle {
+        transform: translateX(28px);
+    }
+
+}

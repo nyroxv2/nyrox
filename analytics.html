@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYROX — Analytics</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+
+<div class="overlay"></div>
+
+
+<!-- =================================================
+     SIDEBAR
+================================================= -->
+
+<div class="sidebar">
+
+<h2>NYROX</h2>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="dashboard.html">🎯 Challenges</a>
+
+<a href="7days.html">🔥 7 Days</a>
+
+<a href="21days.html">⚡ 21 Days</a>
+
+<a href="30days.html">🚀 30 Days</a>
+
+<a href="45days.html">💎 45 Days</a>
+
+<a href="90days.html">👑 90 Days</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+<a href="settings.html">⚙️ Settings</a>
+
+</div>
+
+
+<!-- =================================================
+     HEADER
+================================================= -->
+
+<header class="header">
+
+<div class="logo">
+
+<h1>NYROX</h1>
+
+<p>Analytics</p>
+
+</div>
+
+<button class="menu-btn">
+☰
+</button>
+
+</header>
+
+
+<!-- =================================================
+     ANALYTICS PAGE
+================================================= -->
+
+<main class="daily-page">
+
+
+<div class="page-heading">
+
+<span class="badge">
+PERFORMANCE ANALYTICS
+</span>
+
+<h2>
+YOUR <span>PROGRESS</span>
+</h2>
+
+<p>
+Track your discipline, consistency and execution.
+</p>
+
+</div>
+
+
+<!-- =================================================
+     OVERALL STATS
+================================================= -->
+
+<section class="info-card analytics-stats">
+
+
+<div class="info-item">
+
+<label>Completed</label>
+
+<input
+type="number"
+id="totalDone"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Partial</label>
+
+<input
+type="number"
+id="totalPartial"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Missed</label>
+
+<input
+type="number"
+id="totalMissed"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Pending</label>
+
+<input
+type="number"
+id="totalPending"
+value="0"
+readonly>
+
+</div>
+
+
+</section>
+
+
+<!-- =================================================
+     COMPLETION RATE
+================================================= -->
+
+<section class="progress-card">
+
+<div class="progress-top">
+
+<span>Overall Completion Rate</span>
+
+<span id="completionRate">
+0%
+</span>
+
+</div>
+
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="overallProgressFill">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     STREAK
+================================================= -->
+
+<section class="info-card analytics-stats">
+
+
+<div class="info-item">
+
+<label>Current Streak 🔥</label>
+
+<input
+type="number"
+id="currentStreak"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Best Streak 🏆</label>
+
+<input
+type="number"
+id="bestStreak"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Total Targets</label>
+
+<input
+type="number"
+id="totalTargets"
+value="0"
+readonly>
+
+</div>
+
+
+<div class="info-item">
+
+<label>Completion %</label>
+
+<input
+type="number"
+id="completionNumber"
+value="0"
+readonly>
+
+</div>
+
+
+</section>
+
+
+<!-- =================================================
+     CHALLENGE PERFORMANCE
+================================================= -->
+
+<section class="target-sheet">
+
+<h2>CHALLENGE PERFORMANCE</h2>
+
+
+<div class="analytics-challenge">
+
+<h3>🔥 7 Days</h3>
+
+<div class="progress-top">
+
+<span>Progress</span>
+
+<span id="progress7">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="fill7">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="analytics-challenge">
+
+<h3>⚡ 21 Days</h3>
+
+<div class="progress-top">
+
+<span>Progress</span>
+
+<span id="progress21">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="fill21">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="analytics-challenge">
+
+<h3>🚀 30 Days</h3>
+
+<div class="progress-top">
+
+<span>Progress</span>
+
+<span id="progress30">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="fill30">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="analytics-challenge">
+
+<h3>💎 45 Days</h3>
+
+<div class="progress-top">
+
+<span>Progress</span>
+
+<span id="progress45">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="fill45">
+</div>
+
+</div>
+
+</div>
+
+
+<div class="analytics-challenge">
+
+<h3>👑 90 Days</h3>
+
+<div class="progress-top">
+
+<span>Progress</span>
+
+<span id="progress90">
+0%
+</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="fill90">
+</div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- =================================================
+     STATUS BREAKDOWN
+================================================= -->
+
+<section class="target-sheet">
+
+<h2>TARGET BREAKDOWN</h2>
+
+
+<div class="info-card">
+
+<div class="info-item">
+
+<label>✅ Done</label>
+
+<strong id="breakdownDone">
+0
+</strong>
+
+</div>
+
+
+<div class="info-item">
+
+<label>🟡 Partial</label>
+
+<strong id="breakdownPartial">
+0
+</strong>
+
+</div>
+
+
+<div class="info-item">
+
+<label>❌ Missed</label>
+
+<strong id="breakdownMissed">
+0
+</strong>
+
+</div>
+
+
+<div class="info-item">
+
+<label>⏳ Pending</label>
+
+<strong id="breakdownPending">
+0
+</strong>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+<!-- =================================================
+     MISSED REASONS
+================================================= -->
+
+<section class="target-sheet">
+
+<h2>MISSED TARGET REASONS</h2>
+
+<div id="missedReasons">
+
+<p>
+No missed targets yet.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =================================================
+     REFRESH
+================================================= -->
+
+<button
+class="save-btn"
+id="refreshAnalytics">
+
+↻ Refresh Analytics
+
+</button>
+
+
+</main>
+
+
+<!-- =================================================
+     JAVASCRIPT
+================================================= -->
+
+<script src="analytics.js"></script>
+
+</body>
+
+</html>

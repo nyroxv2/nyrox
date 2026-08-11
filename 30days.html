@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NYROX — 30 Days</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+
+<div class="overlay"></div>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<div class="sidebar">
+
+<h2>NYROX</h2>
+
+<a href="index.html">🏠 Home</a>
+
+<a href="dashboard.html">🎯 Challenges</a>
+
+<a href="7days.html">🔥 7 Days</a>
+
+<a href="21days.html">⚡ 21 Days</a>
+
+<a href="30days.html">🚀 30 Days</a>
+
+<a href="45days.html">💎 45 Days</a>
+
+<a href="90days.html">👑 90 Days</a>
+
+<a href="analytics.html">📊 Analytics</a>
+
+<a href="settings.html">⚙️ Settings</a>
+
+</div>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+<div class="logo">
+
+<h1>NYROX</h1>
+
+<p>30 Days Challenge</p>
+
+</div>
+
+<button class="menu-btn">
+☰
+</button>
+
+</header>
+
+
+<!-- ================= 30 DAYS DASHBOARD ================= -->
+
+<main class="daily-page">
+
+
+<!-- PAGE HEADING -->
+
+<div class="page-heading">
+
+<span class="badge">
+30 DAYS CHALLENGE
+</span>
+
+<h2>
+DAY <span id="currentDay">01</span>
+</h2>
+
+<p>
+Stay focused. Complete today's targets.
+</p>
+
+</div>
+
+
+<!-- ================= PROGRESS ================= -->
+
+<section class="progress-card">
+
+<div class="progress-top">
+
+<span>Today's Progress</span>
+
+<span id="progressPercent">0%</span>
+
+</div>
+
+<div class="progress-bar">
+
+<div
+class="progress-fill"
+id="progressFill">
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= 30 DAYS TRACKER ================= -->
+
+<section class="week-tracker-card">
+
+<h3>30 DAYS TRACKER</h3>
+
+<div class="week-tracker">
+
+<div class="day active">DAY 01</div>
+<div class="day">DAY 02</div>
+<div class="day">DAY 03</div>
+<div class="day">DAY 04</div>
+<div class="day">DAY 05</div>
+<div class="day">DAY 06</div>
+<div class="day">DAY 07</div>
+<div class="day">DAY 08</div>
+<div class="day">DAY 09</div>
+<div class="day">DAY 10</div>
+<div class="day">DAY 11</div>
+<div class="day">DAY 12</div>
+<div class="day">DAY 13</div>
+<div class="day">DAY 14</div>
+<div class="day">DAY 15</div>
+<div class="day">DAY 16</div>
+<div class="day">DAY 17</div>
+<div class="day">DAY 18</div>
+<div class="day">DAY 19</div>
+<div class="day">DAY 20</div>
+<div class="day">DAY 21</div>
+<div class="day">DAY 22</div>
+<div class="day">DAY 23</div>
+<div class="day">DAY 24</div>
+<div class="day">DAY 25</div>
+<div class="day">DAY 26</div>
+<div class="day">DAY 27</div>
+<div class="day">DAY 28</div>
+<div class="day">DAY 29</div>
+<div class="day">DAY 30</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= INFO ================= -->
+
+<section class="info-card">
+
+
+<div class="info-item">
+
+<label>Date</label>
+
+<input
+type="date"
+id="targetDate">
+
+</div>
+
+
+<div class="info-item">
+
+<label>Day</label>
+
+<input
+type="text"
+id="dayName"
+placeholder="Day 1">
+
+</div>
+
+
+<div class="info-item">
+
+<label>Streak 🔥</label>
+
+<input
+type="number"
+id="streak"
+value="0"
+min="0"
+readonly>
+
+</div>
+
+
+</section>
+
+
+<!-- ================= TARGET SHEET ================= -->
+
+<section class="target-sheet">
+
+<h2>DAILY TARGET SHEET</h2>
+
+
+<h3>This Week's Anchor</h3>
+
+<input
+type="text"
+class="full-input"
+id="weeklyAnchor"
+placeholder="Example: No Excuses. Stay Consistent.">
+
+
+<h3>Today's #1 Priority</h3>
+
+<input
+type="text"
+class="full-input"
+id="topPriority"
+placeholder="Most Important Task Today">
+
+
+<h3>Today's Targets</h3>
+
+
+<div id="taskList">
+
+
+<!-- TARGET 1 -->
+
+<div class="target-row">
+
+<input
+type="text"
+placeholder="Target 1"
+class="task-input">
+
+<select class="task-status">
+
+<option value="Pending">Pending</option>
+
+<option value="Done">Done</option>
+
+<option value="Partial">Partial</option>
+
+<option value="Missed">Missed</option>
+
+</select>
+
+</div>
+
+
+<!-- TARGET 2 -->
+
+<div class="target-row">
+
+<input
+type="text"
+placeholder="Target 2"
+class="task-input">
+
+<select class="task-status">
+
+<option value="Pending">Pending</option>
+
+<option value="Done">Done</option>
+
+<option value="Partial">Partial</option>
+
+<option value="Missed">Missed</option>
+
+</select>
+
+</div>
+
+
+<!-- TARGET 3 -->
+
+<div class="target-row">
+
+<input
+type="text"
+placeholder="Target 3"
+class="task-input">
+
+<select class="task-status">
+
+<option value="Pending">Pending</option>
+
+<option value="Done">Done</option>
+
+<option value="Partial">Partial</option>
+
+<option value="Missed">Missed</option>
+
+</select>
+
+</div>
+
+
+</div>
+
+
+<!-- ADD TARGET -->
+
+<button
+class="challenge-btn"
+id="addTask">
+
++ Add Target
+
+</button>
+
+
+</section>
+
+
+<!-- ================= SAVE ================= -->
+
+<button
+class="save-btn"
+id="saveProgress">
+
+Save Progress
+
+</button>
+
+
+</main>
+
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="30days.js"></script>
+
+</body>
+
+</html>

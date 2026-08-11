@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>NYROX — Settings</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="background-grid"></div>
+<div class="overlay"></div>
+
+
+<!-- =================================================
+     SIDEBAR
+================================================= -->
+
+<div class="sidebar">
+
+    <div class="sidebar-brand">
+
+        <h2>NYROX</h2>
+
+        <p>
+            DISCIPLINE • FOCUS • EXECUTION
+        </p>
+
+    </div>
+
+
+    <a href="index.html">
+        🏠 Home
+    </a>
+
+    <a href="dashboard.html">
+        🎯 Challenges
+    </a>
+
+    <a href="7days.html">
+        🔥 7 Days
+    </a>
+
+    <a href="21days.html">
+        ⚡ 21 Days
+    </a>
+
+    <a href="30days.html">
+        🚀 30 Days
+    </a>
+
+    <a href="45days.html">
+        💎 45 Days
+    </a>
+
+    <a href="90days.html">
+        👑 90 Days
+    </a>
+
+    <a href="analytics.html">
+        📊 Analytics
+    </a>
+
+    <a href="settings.html" class="active">
+        ⚙ Settings
+    </a>
+
+</div>
+
+
+<!-- =================================================
+     HEADER
+================================================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <h1>NYROX</h1>
+
+        <p>
+            Settings
+        </p>
+
+    </div>
+
+
+    <button
+        class="menu-btn"
+        type="button">
+
+        ☰
+
+    </button>
+
+</header>
+
+
+<!-- =================================================
+     SETTINGS PAGE
+================================================= -->
+
+<main class="settings-page">
+
+
+    <!-- =================================================
+         PROFILE
+    ================================================= -->
+
+    <section class="settings-card">
+
+        <div class="settings-title">
+
+            <div class="settings-icon">
+                👤
+            </div>
+
+            <h2>
+                PROFILE
+            </h2>
+
+        </div>
+
+
+        <div class="setting-field">
+
+            <label for="userName">
+                Your Name
+            </label>
+
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name">
+
+        </div>
+
+
+        <div class="setting-field">
+
+            <label for="userGoal">
+                Personal Goal
+            </label>
+
+            <input
+                type="text"
+                id="userGoal"
+                placeholder="Example: Crack JEE">
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         APPEARANCE
+    ================================================= -->
+
+    <section class="settings-card">
+
+        <div class="settings-title">
+
+            <div class="settings-icon">
+                🎨
+            </div>
+
+            <h2>
+                APPEARANCE
+            </h2>
+
+        </div>
+
+
+        <div class="setting-option">
+
+            <div>
+
+                <h3>
+                    Dark Mode
+                </h3>
+
+                <p>
+                    Use the dark NYROX interface.
+                </p>
+
+            </div>
+
+
+            <label class="nyrox-toggle">
+
+                <input
+                    type="checkbox"
+                    id="darkMode"
+                    checked>
+
+                <span class="toggle-track">
+
+                    <span class="toggle-circle">
+                        ✓
+                    </span>
+
+                </span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         NOTIFICATIONS
+    ================================================= -->
+
+    <section class="settings-card">
+
+        <div class="settings-title">
+
+            <div class="settings-icon">
+                🔔
+            </div>
+
+            <h2>
+                NOTIFICATIONS
+            </h2>
+
+        </div>
+
+
+        <div class="setting-option">
+
+            <div>
+
+                <h3>
+                    Daily Reminder
+                </h3>
+
+                <p>
+                    Remind yourself to complete
+                    today's targets.
+                </p>
+
+            </div>
+
+
+            <label class="nyrox-check">
+
+                <input
+                    type="checkbox"
+                    id="dailyReminder">
+
+                <span>
+                    ✓
+                </span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         STREAK
+    ================================================= -->
+
+    <section class="settings-card">
+
+        <div class="settings-title">
+
+            <div class="settings-icon">
+                🔥
+            </div>
+
+            <h2>
+                STREAK
+            </h2>
+
+        </div>
+
+
+        <div class="setting-option">
+
+            <div>
+
+                <h3>
+                    Show Streak 🔥
+                </h3>
+
+                <p>
+                    Display your current streak
+                    across the system.
+                </p>
+
+            </div>
+
+
+            <label class="nyrox-check">
+
+                <input
+                    type="checkbox"
+                    id="showStreak"
+                    checked>
+
+                <span>
+                    ✓
+                </span>
+
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         SAVE SETTINGS
+    ================================================= -->
+
+    <button
+        type="button"
+        id="saveSettings"
+        class="settings-save-btn">
+
+        Save Settings
+
+    </button>
+
+
+    <!-- =================================================
+         DANGER ZONE
+    ================================================= -->
+
+    <section class="settings-card danger-zone">
+
+        <div class="danger-title">
+
+            <span>
+                ⚠
+            </span>
+
+            <h2>
+                DANGER ZONE
+            </h2>
+
+        </div>
+
+
+        <p class="danger-description">
+
+            Reset individual challenge progress
+            or reset all challenge data.
+
+        </p>
+
+
+        <div class="reset-grid">
+
+
+            <!-- 7 DAYS -->
+
+            <button
+                type="button"
+                id="reset7Days"
+                class="reset-btn">
+
+                🔥 Reset 7 Days
+
+            </button>
+
+
+            <!-- 21 DAYS -->
+
+            <button
+                type="button"
+                id="reset21Days"
+                class="reset-btn">
+
+                ⚡ Reset 21 Days
+
+            </button>
+
+
+            <!-- 30 DAYS -->
+
+            <button
+                type="button"
+                id="reset30Days"
+                class="reset-btn">
+
+                🚀 Reset 30 Days
+
+            </button>
+
+
+            <!-- 45 DAYS -->
+
+            <button
+                type="button"
+                id="reset45Days"
+                class="reset-btn">
+
+                💎 Reset 45 Days
+
+            </button>
+
+
+            <!-- 90 DAYS -->
+
+            <button
+                type="button"
+                id="reset90Days"
+                class="reset-btn">
+
+                👑 Reset 90 Days
+
+            </button>
+
+
+            <!-- RESET ALL -->
+
+            <button
+                type="button"
+                id="resetAllChallenges"
+                class="reset-btn reset-all">
+
+                🗑️ Reset All Challenges
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================================
+         FOOTER
+    ================================================= -->
+
+    <div class="settings-footer">
+
+        NYROX • Discipline • Focus • Execution
+
+    </div>
+
+</main>
+
+
+<!-- =================================================
+     SETTINGS JAVASCRIPT
+================================================= -->
+
+<script src="settings.js"></script>
+
+</body>
+
+</html>
